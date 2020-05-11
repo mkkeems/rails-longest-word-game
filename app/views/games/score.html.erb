@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>SCORE:<%=@score%></h1>
+  <div class="rando-letter-collection">
+      <% @letters_array.each do |letter| %>
+        <div class='rando-letters'><%= letter.capitalize %></div>
+      <% end %>
+    </div>
+  <h2><%=@result%></h2>
+  <hr>
+  <h2>Your answer: <%=@user_answer%></h2>
+  <h2>Time taken to solve: <%=@time_taken%> seconds</h2>
+  <br>
+  <br>
+  <%= link_to "New game", new_path %>
+</div>
